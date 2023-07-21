@@ -23,7 +23,6 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* position: relative; */
 }
 
 .banner figure {
@@ -36,14 +35,15 @@ body {
 
 .banner figure:nth-child(1) {
     width: 20.9%;
+    top: 380px;
 }
 
 .banner figure:nth-child(2) {
     width: 44.5%;
-    border: 1px solid red;
     right: 0;
     left: 0;
     margin: 0 auto;
+    top: 70px;
 }
 
 .banner figure:nth-child(3) {
@@ -76,37 +76,36 @@ a {
     margin: auto 0;
     font-weight: 500;
     color: #444444;
+    z-index: 1;
 }
 
 .decorate_button {
     position: relative;
-    z-index: -1;
     right: 25px;
     top: 10px;
 }
 
 .decorate_banner {
     position: absolute;
-    left: 1025px;
-    top: 260px;
+    left: 82%;
+    top: 42%;
 }
 
 /* ------------ */
 
 .new {
-    margin: 340px auto 0;
+    margin: 30% auto 0;
     width: 350px;
-    justify-content: center;
     position: relative;
 }
 
 .new h2 {
     font-size: 24px;
-    margin: 15px;
+    padding: 15px;
     color: #D28164;
     font-weight: 500;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .new ul {
@@ -115,10 +114,11 @@ a {
 }
 
 .new li {
-    margin: 8px 17px;
+    padding: 8px 17px;
     letter-spacing: 1px;
     font-size: 16px;
     color: #444444;
+    z-index: 2;
 }
 
 .new img {
@@ -128,33 +128,37 @@ a {
 .new img:nth-child(3) {
     bottom: 40px;
     left: -75px;
+    z-index: 1;
 }
 
 .new img:nth-child(4) {
     right: -200px;
     bottom: 4px;
-}
-
-.new img:nth-child(5) {
-    left: -400px;
-    bottom: -150px;
-}
-
-.new img:nth-child(6) {
-    width: 20px;
-    right: -250px;
-    bottom: -180px;
+    z-index: 1;
 }
 
 /* ------------ */
 
 .background_new_idea {
-    margin-top: -80px;
+    position: relative;
 }
 
-.background_new_idea img {
+.background_new_idea img:nth-child(1) {
+    margin-top: -80px;
     width: 100%;
     vertical-align: top;
+}
+
+.background_new_idea img:nth-child(2) {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.background_new_idea img:nth-child(3) {
+    position: absolute;
+    top: 200px;
+    right: 200px;
 }
 
 /* ------------ */
