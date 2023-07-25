@@ -14,6 +14,7 @@ header {
     width: 1260px;
     margin: auto;
     display: flex;
+    position: relative;
 }
 
 header .logo {
@@ -34,7 +35,7 @@ nav {
 }
 
 nav a {
-    color: #444444;
+    color: #444;
     font-size: 16px;
     text-decoration: none;
     width: 125px;
@@ -48,11 +49,15 @@ nav a:hover {
 }
 
 .header-pattern {
-    height: 180px;
+    height: 155px;
     display: flex;
     align-items: flex-end;
     margin-left: auto;
     padding: 0 50px;
+}
+
+.header-pattern img {
+    width: 140px;
 }
 
 .header-wavy {
@@ -63,7 +68,7 @@ nav a:hover {
 }
 
 h1 {
-    color: #444444;
+    color: #444;
     font-size: 34px;
     font-weight: 500;
     letter-spacing: 0.3px;
@@ -98,133 +103,102 @@ h1 {
 
 /* ---------- main ---------- */
 
-.wrap-main {
-    background-color: #EFEDE1;
-    padding-top: 10px;
-
+.warp-main {
+    background: #EFEDE1;
 }
 
-.main {
-    width: 1260px;
-    margin: auto;
-    position: relative;
-}
-
-.card {
-    display: flex;
-    justify-content: center;
-    height: 375px;
-    position: relative;
-}
-
-.card:nth-child(2),
-.card:nth-child(3),
-.card:nth-child(4) {
-    margin-top: 90px;
-}
-
-.card-block {
-    background-color: #F9FAF5;
-    width: 1065px;
-    height: 295px;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 0;
-}
-
-.button {
-    display: flex;
-    width: 135px;
-    position: absolute;
-    bottom: 30px;
-    right: 25px;
-}
-
-.button img {
-    padding: 0 10px;
-}
-
-.button p {
-    color: #444444;
+.warp-main p {
+    color: #444;
+    text-align: center;
     font-size: 16px;
-    font-weight: 500;
-    margin: auto 0;
-    z-index: 1;
-}
-
-.decorate_button {
-    position: absolute;
-    right: 0;
-    top: 4px;
-}
-
-.card .pic {
-    position: relative;
-    padding-left: 20px;
-}
-
-.cake-pattern {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-
-.card .txt {
-    width: 540px;
-    padding: 0 50px 0 25px;
-    position: relative;
-}
-
-.date {
-    color: #D28164;
-    font-size: 14px;
-    padding: 12px 14px 10px;
-}
-
-h2 {
-    color: #444444;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 5px 0 30px;
-}
-
-.content {
-    color: #444444;
-    font-size: 16px;
-    padding: 0 12px;
     letter-spacing: 1.6px;
-    line-height: 25px;
 }
 
-.content p {
-    padding: 12px 0;
+.warp-main .main {
+    margin: 30px auto;
+    width: 854px;
+    height: 840px;
+    border-radius: 10px;
+    background: #F9FAF5;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.page {
+.warp-main .main img {
+    position: absolute;
+}
+
+.warp-main .main img:nth-child(1) {
+    left: -160px;
+}
+
+.warp-main .main img:nth-child(2) {
+    transform: rotate(-20deg);
+    top: 150px;
+    left: -100px;
+}
+
+.warp-main .main img:nth-child(3) {
+    width: 90px;
+    right: -140px;
+    bottom: -70px;
+}
+
+input,
+select {
+    font-family: Gen Jyuu Gothic;
+    width: 535px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input {
+    padding: 0 25px;
+}
+
+select {
+    padding: 0 20px;
+    color: #757575;
+}
+
+textarea {
+    width: 535px;
+    font-family: Gen Jyuu Gothic;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px 22px 0;
+    resize: none;
+}
+
+.submit {
+    width: 215px;
+    height: 40px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px 0 40px;
+    margin: 25px auto 0;
 }
 
-.page img {
-    padding: 0 40px;
-}
-
-.page img:nth-child(1) {
-    transform: rotate(180deg);
-}
-
-.page p {
-    padding: 0 20px;
-    color: #444444;
-    font-size: 14px;
-}
-
-.page p:nth-child(2) {
-    color: #D28164;
+.submit input {
+    background: #F59C7C;
+    color: #FFF;
     font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .main-wavy {
@@ -233,17 +207,11 @@ h2 {
     vertical-align: top;
 }
 
-.main-pattern {
-    position: absolute;
-    right: 70px;
-    bottom: -50px;
-}
-
 /* ---------- footer ---------- */
 
 .warp-footer {
     background-color: #F2F2EA;
-    margin-top: -1px;
+    margin-top: -2px;
 }
 
 footer {
@@ -273,12 +241,12 @@ footer .item li {
     padding: 10px 0;
 }
 
-footer .item .list {
+footer .list {
     display: flex;
     padding: 0 60px;
 }
 
-footer .item .list-product {
+footer .list-product {
     padding-right: 80px;
 }
 
@@ -304,6 +272,7 @@ footer .item a:hover {
 .focus {
     padding: 0 60px;
 }
+
 
 .focus .fa-solid,
 .focus .fa-brands,
