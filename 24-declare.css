@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Gen Jyuu Gothic;
+    src: url(font/GenJyuuGothic-Bold.ttf);
+    src: url(font/GenJyuuGothic-ExtraLight.ttf);
+    src: url(font/GenJyuuGothic-Heavy.ttf);
+    src: url(font/GenJyuuGothic-Light.ttf);
+    src: url(font/GenJyuuGothic-Medium.ttf);
+    src: url(font/GenJyuuGothic-Regular.ttf);
+}
+
 body {
     font-family: Gen Jyuu Gothic;
     width: 100%;
