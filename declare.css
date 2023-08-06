@@ -6,6 +6,7 @@
     src: url(font/GenJyuuGothic-Light.ttf);
     src: url(font/GenJyuuGothic-Medium.ttf);
     src: url(font/GenJyuuGothic-Regular.ttf);
+    src: url(GenJyuuGothic-Normal.ttf);
 }
 
 body {
@@ -24,6 +25,7 @@ header {
     width: 1260px;
     margin: auto;
     display: flex;
+    position: relative;
 }
 
 header .logo {
@@ -44,7 +46,7 @@ nav {
 }
 
 nav a {
-    color: #444444;
+    color: #444;
     font-size: 16px;
     text-decoration: none;
     width: 125px;
@@ -58,7 +60,7 @@ nav a:hover {
 }
 
 .header-pattern {
-    height: 180px;
+    height: 170px;
     display: flex;
     align-items: flex-end;
     margin-left: auto;
@@ -73,7 +75,7 @@ nav a:hover {
 }
 
 h1 {
-    color: #444444;
+    color: #444;
     font-size: 34px;
     font-weight: 500;
     letter-spacing: 0.3px;
@@ -108,10 +110,11 @@ h1 {
 
 /* ---------- main ---------- */
 
-.wrap-main {
+.warp-main {
     background-color: #EFEDE1;
-    padding-top: 10px;
-
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
 }
 
 .main {
@@ -120,121 +123,193 @@ h1 {
     position: relative;
 }
 
-.card {
+.main .subnav p {
+    color: #444;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+
+.main .subnav .guide {
     display: flex;
     justify-content: center;
-    height: 375px;
-    position: relative;
 }
 
-.card:nth-child(2),
-.card:nth-child(3),
-.card:nth-child(4) {
-    margin-top: 90px;
-}
-
-.card-block {
-    background-color: #F9FAF5;
-    width: 1065px;
-    height: 295px;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 0;
-}
-
-.button {
-    display: flex;
-    width: 135px;
-    position: absolute;
-    bottom: 30px;
-    right: 25px;
-}
-
-.button img {
-    padding: 0 10px;
-}
-
-.button p {
-    color: #444444;
-    font-size: 16px;
+.main .subnav .guide a {
+    width: 210px;
+    height: 60px;
+    color: #444;
+    font-size: 18px;
     font-weight: 500;
-    margin: auto 0;
-    z-index: 1;
-}
-
-.decorate_button {
-    position: absolute;
-    right: 0;
-    top: 4px;
-}
-
-.card .pic {
-    position: relative;
-    padding-left: 20px;
-}
-
-.cake-pattern {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-
-.card .txt {
-    width: 540px;
-    padding: 0 50px 0 25px;
-    position: relative;
-}
-
-.date {
-    color: #D28164;
-    font-size: 14px;
-    padding: 12px 14px 10px;
-}
-
-h2 {
-    color: #444444;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 5px 0 30px;
-}
-
-.content {
-    color: #444444;
-    font-size: 16px;
-    padding: 0 12px;
-    letter-spacing: 1.6px;
-    line-height: 25px;
-}
-
-.content p {
-    padding: 12px 0;
-}
-
-.page {
+    line-height: 30px;
+    /* border-radius: 10px; */
+    /* background: #F9FAF5; */
+    /* box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10); */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px 0 40px;
+    margin: 0 55px;
+    text-decoration: none;
+    border-top: 4px double #444;
+    border-bottom: 1px solid #999;
 }
 
-.page img {
+h2 {
+    color: #D28164;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 40px;
+    margin: 40px 0 35px 170px;
+}
+
+.quality>p {
+    width: 910px;
+    color: #444;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-left: 190px;
+}
+
+.method {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.method .item {
+    display: flex;
+    width: 360px;
+    height: 140px;
+    margin: 0 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+h3 {
+    color: #444;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 70px 0 20px 190px;
+}
+
+.method .item .txt {
+    width: 220px;
+}
+
+h4 {
+    color: #4b6e91;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    padding: 30px 0 15px 0;
+}
+
+.method .txt p {
+    color: #444;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.report {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.report div {
+    width: 425px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F9FAF5;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10);
+    color: #444;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.safe-title,
+.safe-content {
+    display: flex;
+    justify-content: center;
+}
+
+.title,
+.content {
+    width: 350px;
+    height: 45px;
+    color: #444;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.content {
+    border: 1px solid #aaa;
+    background: #F9FAF5;
+}
+
+.safe-content img {
     padding: 0 40px;
+    margin-bottom: -50px;
 }
 
-.page img:nth-child(1) {
+.safe-content img:nth-child(1) {
     transform: rotate(180deg);
 }
 
-.page p {
-    padding: 0 20px;
-    color: #444444;
-    font-size: 14px;
+.supplier {
+    width: 900px;
+    color: #444;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-left: 210px;
+    padding: 15px 0;
 }
 
-.page p:nth-child(2) {
-    color: #D28164;
-    font-size: 18px;
+.qna {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.qna div {
+    width: 275px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F9FAF5;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10);
+    color: #444;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-pattern {
+    position: absolute;
+    left: 70px;
+}
+
+.safe-pattern {
+    width: 75px;
+    position: absolute;
+    right: 60px;
+}
+
+.qna-pattern {
+    position: absolute;
+    right: 70px;
 }
 
 .main-wavy {
@@ -243,17 +318,13 @@ h2 {
     vertical-align: top;
 }
 
-.main-pattern {
-    position: absolute;
-    right: 70px;
-    bottom: -50px;
-}
-
 /* ---------- footer ---------- */
 
 .warp-footer {
     background-color: #F2F2EA;
     margin-top: -1px;
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -271,24 +342,24 @@ footer .logo img {
     width: 100%;
 }
 
-footer .item {
+.item {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
 }
 
-footer .item li {
+.item li {
     color: #444444;
     font-size: 14px;
     padding: 10px 0;
 }
 
-footer .item .list {
+.list {
     display: flex;
     padding: 0 60px;
 }
 
-footer .item .list-product {
+.list-product {
     padding-right: 80px;
 }
 
@@ -314,6 +385,7 @@ footer .item a:hover {
 .focus {
     padding: 0 60px;
 }
+
 
 .focus .fa-solid,
 .focus .fa-brands,

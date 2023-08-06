@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>24_劉宜靜 雀梅菓舖</title>
+    <title>雀梅菓舖</title>
     <link rel="stylesheet" href="meyerweb css reset.css">
-    <link rel="stylesheet" href="24-index.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,12 +23,15 @@
                 </a>
             </figure>
 
+            <!-- ---------- nav ---------- -->
+
             <figure>
-                <a href="24-product.html">
+                <a href="product.html">
                     <img class="main" src="object/banner_japanesecandy.png" alt="banner_japanesecandy">
                     <figcaption>
                         <div class="button">
                             <img src="object/button.svg" alt="button">
+                            <img src="object/button_active.svg" alt="button_active" class="active">
                             <p>和三盆糖打菓子</p>
                             <img src="object/flower_round.svg" alt="round" class="decorate_button">
                         </div>
@@ -50,22 +53,34 @@
 
         <!-- ---------- logo ---------- -->
 
+
         <div class="wrap-logo">
             <div class="logo">
-                <a href=""><img src="object/logo.svg" alt="logo"></a>
+                <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
+        </div>
+
+        <!-- ---------- nav ---------- -->
+        <div class="wrap-header">
+            <header>
+                <nav>
+                    <a href="news.html">最新消息</a>
+                    <a href="product.html">商品資訊</a>
+                    <a href="declare.html">安心宣言</a>
+                    <a href="member.html">會員專區</a>
+                    <a href="service.html">聯繫我們</a>
+                </nav>
+            </header>
         </div>
 
         <!---------- new ---------->
 
         <div class="new">
             <h2>最新消息</h2>
-            <a href="24-news.html">
-                <ul>
-                    <li>2023年07月05日 「栗蒸羊羹」新發售</li>
-                    <li>2023年03月21日 「櫻餅」春季限定販售</li>
-                </ul>
-            </a>
+            <ul>
+                <li><a href="news.html">2023年07月05日 「栗蒸羊羹」新發售</a></li>
+                <li><a href="news.html">2023年03月21日 「櫻餅」春季限定販售</a></li>
+            </ul>
 
             <img src="object/flower_left.svg" alt="flower_left">
             <img src="object/pattern_group.svg" alt="pattern_group">
@@ -76,8 +91,8 @@
 
     <img src="object/background_wavy1.png" alt="background_wavy1" class="background_new_idea_wavy">
     <div class="background_new_idea">
-        <img src="object/pattern_fish.svg" alt="pattern_fish" class="pattern_wavy_fish">
-        <img src="object/flower_round.svg" alt="flower_round" class="pattern_wavy">
+        <img src="object/pattern_fish.svg" alt="pattern_fish">
+        <img src="object/flower_round.svg" alt="flower_round">
     </div>
 
     <!---------- idea ---------->
@@ -102,30 +117,29 @@
         <div class="list">
             <img src="object/font_two.svg" alt="font_two">
             <img src="object/pattern_crackers.svg" alt="pattern_crackers">
-            <figure>
-                <img src="object/new.png" alt="new">
-                <p>新品上市、促銷活動及聯名等相關資訊</p>
-                <figcaption>
-                    <a href="">
-                        <div class="button">
-                            <img src="object/button.svg" alt="button">
-                            <p>最新消息</p>
-                            <img src="object/flower_round.svg" alt="round" class="decorate_button">
-                        </div>
-                    </a>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="object/product.png" alt="product">
-                <p>各式種類不同特色的和菓子</p>
-                <figcaption>
+            <div>
+                <a href="news.html">
+                    <img src="object/new.png" alt="new">
+                    <p>新品上市、促銷活動及聯名等相關資訊</p>
                     <div class="button">
                         <img src="object/button.svg" alt="button">
+                        <img src="object/button_active.svg" alt="button_active" class="active">
+                        <p>最新消息</p>
+                        <img src="object/flower_round.svg" alt="round" class="decorate_button">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="product.html"><img src="object/product.png" alt="product">
+                    <p>各式種類不同特色的和菓子</p>
+                    <div class="button">
+                        <img src="object/button.svg" alt="button">
+                        <img src="object/button_active.svg" alt="button_active" class="active">
                         <p>商品資訊</p>
                         <img src="object/flower_round.svg" alt="round" class="decorate_button">
                     </div>
-                </figcaption>
-            </figure>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -145,7 +159,7 @@
 
         <div class="hot-item">
             <div class="card_item">
-                <div class="card">
+                <a href="product-description.html" class="card">
                     <div class="pic">
                         <img src="object/product_group.png" alt="product_group" class="group">
                     </div>
@@ -153,8 +167,8 @@
                         <h3>花見團子</h3>
                         <p>軟糯扎實的口感<br>帶有清香的梅香及甜味</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="product-description.html" class="card">
                     <div class="pic">
                         <img src="object/carousel_candy.png" alt="carousel_candy">
                     </div>
@@ -162,8 +176,8 @@
                         <h3>千歲梅飴</h3>
                         <p>圖案五顏六色繽紛可愛<br>帶有梅香及奶味香甜可口</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="product-description.html" class="card">
                     <div class="pic">
                         <img src="object/carousel_cake.png" alt="carousel_cake">
                     </div>
@@ -171,8 +185,8 @@
                         <h3>栗蒸羊羹</h3>
                         <p>口感軟Ｑ甜度溫和<br>帶栗子顆粒與栗子泥的香醇</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="product-description.html" class="card">
                     <div class="pic rice">
                         <img src="object/carousel_rice.png" alt="carousel_rice">
                     </div>
@@ -180,8 +194,8 @@
                         <h3>梅香櫻餅</h3>
                         <p>粒粒分明的口感<br>帶有清香的梅香及甜味</p>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="product-description.html" class="card">
                     <div class="pic">
                         <img src="object/product_group.png" alt="product_group" class="group">
                     </div>
@@ -189,15 +203,16 @@
                         <h3>花見團子</h3>
                         <p>軟糯扎實的口感<br>帶有清香的梅香及甜味</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="warp-button">
-            <div class="button">
+            <a href="product.html" class="button">
                 <img src="object/button.svg" alt="button">
+                <img src="object/button_active.svg" alt="button_active" class="active">
                 <p>更多商品</p>
                 <img src="object/flower_round.svg" alt="round" class="decorate_button">
-            </div>
+            </a>
         </div>
     </div>
 
@@ -210,19 +225,19 @@
     <div class="warp-footer">
         <footer>
             <div class="logo">
-                <a href="24-index.html"><img src="object/logo.svg" alt="logo"></a>
+                <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
 
             <div class="item">
                 <div class="list">
                     <ul class="list-product">
-                        <li><a href="24-news.html">最新消息</a></li>
-                        <li><a href="24-product.html">商品資訊</a></li>
-                        <li><a href="24-declare.html">安心宣言</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="product.html">商品資訊</a></li>
+                        <li><a href="declare.html">安心宣言</a></li>
                     </ul>
                     <ul class="list-client">
-                        <li><a href="24-member.html">會員專區</a></li>
-                        <li><a href="24-service.html">聯繫我們</a></li>
+                        <li><a href="member.html">會員專區</a></li>
+                        <li><a href="service.html">聯繫我們</a></li>
                     </ul>
                 </div>
 

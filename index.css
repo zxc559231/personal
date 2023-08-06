@@ -6,6 +6,7 @@
     src: url(font/GenJyuuGothic-Light.ttf);
     src: url(font/GenJyuuGothic-Medium.ttf);
     src: url(font/GenJyuuGothic-Regular.ttf);
+    src: url(GenJyuuGothic-Normal.ttf);
 }
 
 body {
@@ -44,7 +45,7 @@ body {
     right: 0;
     left: 0;
     margin: 0 auto;
-    top: 70px;
+    top: 85px;
 }
 
 .banner figure:nth-child(3) {
@@ -65,12 +66,23 @@ a {
 
 .button {
     display: flex;
+    position: relative;
 }
 
 .button img {
     padding: 0 10px;
 }
 
+.active {
+    position: absolute;
+    opacity: 0;
+    transform: translate(0, 2.5px);
+    transition: .3s;
+}
+
+figure:hover .active {
+    opacity: 1;
+}
 
 .button p {
     font-size: 16px;
@@ -94,10 +106,6 @@ a {
 
 /* ---------- logo ---------- */
 
-.wrap-logo {
-    margin: auto;
-}
-
 .background_header .logo {
     width: 214px;
     padding: 29px 53px;
@@ -105,6 +113,38 @@ a {
 
 .background_header .logo img {
     width: 100%;
+}
+
+/* ---------- nav ---------- */
+
+.wrap-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    margin-top: 35px;
+}
+
+nav {
+    width: 500px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav a {
+    color: #444;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #D28164;
 }
 
 /* ---------- new ---------- */
@@ -155,29 +195,32 @@ a {
 
 /* ---------- wavy pattern ---------- */
 
-.background_new_idea {
-    width: 1260px;
-    position: relative;
-    margin: auto;
-}
 
 .background_new_idea_wavy {
     margin-top: -80px;
     width: 100%;
+    height: 198px;
     vertical-align: top;
+}
+
+.background_new_idea {
+    width: 1260px;
+    position: relative;
+    margin: auto;
+    z-index: 1;
 }
 
 .background_new_idea img:nth-child(1) {
     position: absolute;
-    left: 40px;
-    top: -20px;
+    left: 50px;
+    top: -40px;
 }
 
 .background_new_idea img:nth-child(2) {
     position: absolute;
     width: 22px;
-    top: 50px;
-    right: 180px;
+    top: 45px;
+    right: 190px;
 }
 
 /* ---------- idea ---------- */
@@ -185,7 +228,7 @@ a {
 .background_idea_list {
     background-color: #EFEDE1;
     position: relative;
-    z-index: -3;
+    z-index: 0;
 }
 
 .idea {
@@ -193,10 +236,9 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 60px 0 0;
-    margin: 0 60px 165px;
+    padding-top: 60px;
+    margin: 0 auto 165px;
     position: relative;
-    margin: auto;
 }
 
 .idea .pic {
@@ -227,7 +269,6 @@ a {
 .decorate_white {
     position: absolute;
 }
-
 
 .idea img:nth-child(3) {
     z-index: -1;
@@ -267,21 +308,25 @@ a {
     right: 60px;
 }
 
-.list figure {
+.list div {
     margin: 0 40px;
 }
 
-.list figure>p {
+.list div:hover .active {
+    opacity: 1;
+}
+
+.list a>p {
     margin: 10px 0 10px 40px;
     font-size: 14px;
     color: #444444;
 }
 
-.list figcaption .button {
+.list .button {
     margin: 10px 0 0 32px;
 }
 
-.list figure figcaption p {
+.list .button p {
     color: #444444;
     font-size: 16px;
 }
@@ -291,6 +336,7 @@ a {
 .background_list_hot {
     width: 100%;
     vertical-align: top;
+    height: 228px;
 }
 
 /* ---------- hot ---------- */
@@ -348,7 +394,6 @@ a {
     background-color: #F2F2EA;
     position: relative;
 }
-
 
 .card_item {
     display: flex;
@@ -417,6 +462,15 @@ a {
 .warp-button .button {
     width: 100%;
     justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.button:hover .active {
+    opacity: 1;
+}
+
+.warp-button .active {
+    transform: translate(-111px, 2.5px);
 }
 
 .warp-button .button .decorate_button {
