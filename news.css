@@ -18,8 +18,7 @@ body {
     background-color: #F2F2EA;
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:1259px) {
 
     /* ---------- header ---------- */
 
@@ -29,7 +28,8 @@ body {
 
     header .logo {
         width: 20%;
-        padding: 3%;
+        padding: 20px 5%;
+        max-width: 160px;
     }
 
     header .logo img {
@@ -53,9 +53,11 @@ body {
     }
 
     .header-wavy {
-        width: 100%;
-        vertical-align: top;
-        margin: 30px 0 0;
+        /* width: 100%;
+        max-height: 180px;
+        margin-top: -40px;
+        vertical-align: top; */
+        display: none;
     }
 
     h1 {
@@ -66,29 +68,28 @@ body {
         text-align: center;
         position: absolute;
         z-index: 1;
-        top: 100px;
+        bottom: 20%;
         right: 0;
         left: 0;
     }
 
     .h1-pattern {
-        /* position: relative; */
+        position: relative;
         margin: auto;
-    }
-
-    .h1-pattern img {
-        position: absolute;
+        width: 300px;
     }
 
     .h1-pattern img:nth-child(1) {
+        position: absolute;
         width: 55px;
-        top: 100px;
-        left: 30%;
+        top: -100px;
+        left: 48px;
     }
 
     .h1-pattern img:nth-child(2) {
-        top: 80px;
-        right: 20%;
+        position: absolute;
+        top: -110px;
+        right: 10px;
     }
 
     /* ---------- main ---------- */
@@ -114,6 +115,7 @@ body {
     .card-block {
         background-color: #F9FAF5;
         width: 90%;
+        max-width: 700px;
         height: 90%;
         border-radius: 50px;
         position: absolute;
@@ -166,6 +168,7 @@ body {
     .card .pic {
         position: relative;
         width: 80%;
+        max-width: 450px;
         margin: auto;
     }
 
@@ -175,7 +178,7 @@ body {
 
     .cake-pattern {
         position: absolute;
-        right: 20px;
+        right: 10px;
         top: 20px;
     }
 
@@ -216,6 +219,8 @@ body {
 
     .content p {
         padding: 5px 0;
+        max-width: 600px;
+        margin: auto;
     }
 
     .page {
@@ -223,14 +228,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 70px 0 40px;
+        padding: 50px 0 30px;
         position: relative;
         margin: auto;
     }
 
     .page a:nth-child(1),
     .page a:nth-child(5) {
-        margin: 0 40px;
+        margin: 0 30px;
     }
 
     .page .left {
@@ -275,8 +280,9 @@ body {
 
     footer {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+        margin: auto;
+        padding: 20px 0;
     }
 
     footer .logo {
@@ -286,7 +292,12 @@ body {
     footer .item {
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
+        width: 100%;
+        max-width: 850px;
+    }
+
+    footer .item ul {
+        padding: 5px;
     }
 
     footer .item li {
@@ -297,11 +308,9 @@ body {
 
     footer .item .list {
         display: flex;
-        padding: 0 60px;
-    }
-
-    footer .item .list-product {
-        padding-right: 80px;
+        justify-content: space-evenly;
+        width: 300px;
+        margin: auto;
     }
 
     footer .item a {
@@ -315,7 +324,9 @@ body {
     }
 
     .company {
-        padding: 0 60px;
+        width: 300px;
+        margin: auto;
+        text-align: center;
     }
 
     .company li span {
@@ -324,7 +335,9 @@ body {
     }
 
     .focus {
-        padding: 0 60px;
+        margin: auto;
+        width: 200px;
+        text-align: center;
     }
 
     .focus .fa-solid,
@@ -332,8 +345,12 @@ body {
     .company .fa-solid {
         color: #444444;
         font-size: 22px;
-        padding-right: 10px;
+        padding: 3px;
         transition: .3s;
+    }
+
+    .fa-facebook-f {
+        margin: 0 3px;
     }
 
     .focus .fa-solid:hover,
@@ -349,6 +366,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 5%;
     }
 }
 
