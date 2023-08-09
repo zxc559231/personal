@@ -8,19 +8,60 @@
     <link rel="stylesheet" href="meyerweb css reset.css">
     <link rel="stylesheet" href="news.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            let showHeight = 50
+            $(window).scroll(function () {
+                $(`.card:nth-child(n+2):nth-child(-n+4)`).each(function () {
+                    let areaTop = $(this).offset().top
+                    if ($(window).scrollTop() >= (areaTop + showHeight) - $(window).height()) {
+                        $(this).stop().animate({
+                            opacity: 1,
+                            top: '0px',
+                        }, 500)
+                    } else {
+                        $(this).stop().animate({
+                            opacity: 0,
+                            top: '-20px',
+                        }, 0)
+                    }
+                })
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $(`body`).mousemove(function (e) {
+                $('.mouse').show().css({ 'left': e.pageX + 2, 'top': e.pageY + 2 });
+            })
+                .mouseout(function () {
+                    $('.mouse').hide()
+                })
+        })	
+    </script>
+
 </head>
 
 <body>
 
-    <!-- ---------- header ---------- -->
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
 
+    <!-- ---------- header ---------- -->
     <div class="wrap-header">
         <header>
             <div class="logo">
                 <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
 
-
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="sidebar-tag">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <a href="news.html">最新消息</a>
                 <a href="product.html">商品資訊</a>
@@ -193,7 +234,7 @@
                 <ul class="company">
                     <li>梅子和菓有限公司</li>
                     <li>台灣省桃園市中壢區復興路46號</li>
-                    <li><i class="fa-solid fa-envelope"></i><span>QueMei@gmail.com</span></li>
+                    <li class="email"><i class="fa-solid fa-envelope"></i><span>QueMei@gmail.com</span></li>
                 </ul>
 
                 <ul class="focus">
