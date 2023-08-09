@@ -35,7 +35,7 @@
     <script>
         $(function () {
             $(`body`).mousemove(function (e) {
-                $('.mouse').show().css({ 'left': e.pageX + 2, 'top': e.pageY + 2 });
+                $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
             })
                 .mouseout(function () {
                     $('.mouse').hide()
@@ -43,11 +43,19 @@
         })	
     </script>
 
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
 </head>
 
 <body>
 
     <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
 
     <!-- ---------- header ---------- -->
     <div class="wrap-header">
@@ -128,7 +136,7 @@
                 </div>
                 <div class="txt">
                     <p class="date">2023年 03月 21日</p>
-                    <h2><a href="product-description.html">「櫻餅」春季限定販售　4/1 ~ 4/30</a></h2>
+                    <h2><a href="product-description.html">「櫻餅」春季限定販售　<span>4/1 ~ 4/30</span></a></h2>
                     <div class="content">
                         <p>櫻餅是發源於江戶時代用櫻葉包起來的一種日式點心。</p>
                         <p>櫻花的香味隱約飄香，點綴春天代表的期間菓子。</p>
@@ -178,7 +186,7 @@
                 </div>
                 <div class="txt">
                     <p class="date">2022年 02月 16日</p>
-                    <h2><a href="product-description.html">「草莓銅鑼燒」春季限定販售　3/1 ~ 3/31</a></h2>
+                    <h2><a href="product-description.html">「草莓銅鑼燒」春季限定販售　<span>3/1 ~ 3/31</span></a></h2>
                     <div class="content">
                         <p>經典的銅鑼燒充滿蜂蜜和蛋香的餅皮中，夾滿著用當季草莓和細緻的乳酪混合內餡。</p>
                         <p>紅豆泥餡不會太甜膩，入口還帶著草莓的香甜的滋味，酸酸甜甜的濃純香，忍不住一口接一口。</p>
