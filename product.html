@@ -8,9 +8,36 @@
     <link rel="stylesheet" href="meyerweb css reset.css">
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
 
     <!-- ---------- header ---------- -->
 
@@ -20,6 +47,12 @@
                 <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
 
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="sidebar-tag">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <a href="news.html">最新消息</a>
                 <a href="product.html">商品資訊</a>
@@ -29,8 +62,34 @@
             </nav>
 
             <div class="function">
-                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <input type="checkbox" id="glass">
+                <label for="glass" class="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <div class="glass">
+                    <form action="">
+                        <input type="text" placeholder="搜尋" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='搜尋'">
+                    </form>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <input type="checkbox" id="shopping">
+                <label for="shopping" class="">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </label>
+                <div class="shopping">
+                    <div>
+                        <p>購物車</p>
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <img src="object/shopping.svg" alt="shopping">
+                    <p>購物車內沒有任何商品</p>
+                    <button>結帳</button>
+                </div>
             </div>
 
             <div class="header-pattern">

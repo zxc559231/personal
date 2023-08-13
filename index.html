@@ -8,22 +8,54 @@
     <link rel="stylesheet" href="meyerweb css reset.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
 
     <!-- ---------- header ---------- -->
 
     <div class="background_header">
         <div class="banner">
             <figure>
-                <a href="">
+                <a href="product.html">
                     <img class="main" src="object/banner_jelly.png" alt="banner_jelly">
-                    <figcaption></figcaption>
+                    <figcaption style="display: none;">
+                        <div class="button">
+                            <img src="object/button.svg" alt="button">
+                            <img src="object/button_active.svg" alt="button_active" class="active">
+                            <p>映梅錦玉</p>
+                            <img src="object/flower_round.svg" alt="round" class="decorate_button">
+                        </div>
+                    </figcaption>
                 </a>
             </figure>
-
-            <!-- ---------- nav ---------- -->
 
             <figure>
                 <a href="product.html">
@@ -42,7 +74,14 @@
             <figure>
                 <a href="">
                     <img class="main" src="object/banner_cat.png" alt="banner_cat">
-                    <figcaption></figcaption>
+                    <figcaption style="display: none;">
+                        <div class="button">
+                            <img src="object/button.svg" alt="button">
+                            <img src="object/button_active.svg" alt="button_active" class="active">
+                            <p>烏喵練切</p>
+                            <img src="object/flower_round.svg" alt="round" class="decorate_button">
+                        </div>
+                    </figcaption>
                 </a>
             </figure>
         </div>
@@ -63,6 +102,12 @@
         <!-- ---------- nav ---------- -->
         <div class="wrap-header">
             <header>
+                <input type="checkbox" id="sidebar">
+                <label for="sidebar" class="sidebar-tag">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <nav>
                     <a href="news.html">最新消息</a>
                     <a href="product.html">商品資訊</a>
@@ -219,7 +264,7 @@
     <!-- ---------- footer ---------- -->
 
     <div class="about">
-        <img src="object/footer.png" alt="">
+        <img src="object/footer.png" alt="footer">
     </div>
 
     <div class="warp-footer">

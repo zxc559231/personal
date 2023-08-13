@@ -62,11 +62,37 @@
             </nav>
 
             <div class="function">
-                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
+                <input type="checkbox" id="glass">
+                <label for="glass" class="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <div class="glass">
+                    <form action="">
+                        <input type="text" placeholder="搜尋" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='搜尋'">
+                    </form>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
 
+                <input type="checkbox" id="shopping">
+                <label for="shopping" class="">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </label>
+                <div class="shopping">
+                    <div>
+                        <p>購物車</p>
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <img src="object/shopping.svg" alt="shopping">
+                    <p>購物車內沒有任何商品</p>
+                    <button>結帳</button>
+                </div>
+            </div>
         </header>
+
         <img src="object/background_wavy8.png" alt="background_wavy8" class="header-wavy">
     </div>
 
@@ -75,7 +101,9 @@
     <div class="wrap-main">
         <div class="main">
             <div class="subnav">
-                商品資訊　/　生菓子　/　花見糰子
+                <a href="product.html">商品資訊</a>
+                <a href="product.html">生菓子</a>
+                <a href="product-description.html">花見糰子</a>
             </div>
 
             <div class="main-pattern">
@@ -103,21 +131,21 @@
                     <p class="desc">軟糯的口感，帶有梅香與清甜味</p>
                     <p class="spec">規格 4入/盒</p>
                     <p class="price">NT$ 120</p>
+                    <div>
+                        <div class="taste">
+                            <p>口味</p>
+                            <img src="object/pattern_drop.svg" alt="pattern_drop">
+                        </div>
 
-                    <div class="taste">
-                        <p>口味</p>
-                        <img src="object/pattern_drop.svg" alt="pattern_drop">
+                        <div class="count">
+                            <img src="object/pattern_minus.svg" alt="pattern_minus">
+                            <p>數量</p>
+                            <img src="object/pattern_plus.svg" alt="pattern_plus">
+                        </div>
                     </div>
-
-                    <div class="count">
-                        <img src="object/pattern_minus.svg" alt="pattern_minus">
-                        <p>數量</p>
-                        <img src="object/pattern_plus.svg" alt="pattern_plus">
-                    </div>
-
-                    <div class="shop">
+                    <button class="shop">
                         <p>加入購物車</p>
-                    </div>
+                    </button>
                 </div>
             </div>
 
