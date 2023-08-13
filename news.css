@@ -1,23 +1,26 @@
+/* ExtraLight 100  Light 200  Normal 300  Regular 400  Medium 500  Bold 700  Heavy 900 */
+
 @font-face {
-    font-family: Gen Jyuu Gothic;
-    src: url(font/GenJyuuGothic-Bold.ttf);
-    src: url(font/GenJyuuGothic-ExtraLight.ttf);
-    src: url(font/GenJyuuGothic-Heavy.ttf);
-    src: url(font/GenJyuuGothic-Light.ttf);
-    src: url(font/GenJyuuGothic-Medium.ttf);
-    src: url(font/GenJyuuGothic-Regular.ttf);
-    src: url(GenJyuuGothic-Normal.ttf);
+    font-family: GenJyuuGothic;
+    src: url(font/GenJyuuGothic-Normal.ttf),
+        url(font/GenJyuuGothic-Medium.ttf),
+        url(font/GenJyuuGothic-Heavy.ttf),
+        url(font/GenJyuuGothic-Bold.ttf),
+        url(font/GenJyuuGothic-Regular.ttf),
+        url(font/GenJyuuGothic-Light.ttf),
+        url(font/GenJyuuGothic-ExtraLight.ttf);
 }
 
 body {
-    font-family: Gen Jyuu Gothic;
+    font-family: GenJyuuGothic;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .mouse {
     width: 80px;
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     display: none;
 }
 
@@ -32,11 +35,11 @@ body {
 @keyframes flower1 {
     0% {
         opacity: 0;
-        transform: rotate(-180deg);
+        transform: rotate(-680deg);
     }
 
     100% {
-        opacity: 1;
+
         transform: rotate(0deg);
     }
 }
@@ -44,7 +47,7 @@ body {
 @keyframes flower2 {
     0% {
         opacity: 0;
-        transform: rotate(120deg);
+        transform: rotate(620deg);
     }
 
     100% {
@@ -54,7 +57,6 @@ body {
 }
 
 /* ---------- RWD ---------- */
-
 @media screen and (max-width:1260px) {
 
     /* ---------- header ---------- */
@@ -75,7 +77,6 @@ body {
         padding-left: 6%;
         max-width: 160px;
         position: relative;
-        /* top: 20px; */
         z-index: 1;
     }
 
@@ -132,20 +133,20 @@ body {
     #sidebar:checked~.sidebar-tag span:nth-child(1) {
         translate: 0 0%;
         rotate: 45deg;
-        transition: translate .4s .4s linear,
-            rotate .4s .8s linear;
+        transition: translate .4s linear,
+            rotate .4s .4s linear;
     }
 
     #sidebar:checked~.sidebar-tag span:nth-child(2) {
         opacity: 0;
-        transition: opacity 0s .8s;
+        transition: opacity 0s .4s;
     }
 
     #sidebar:checked~.sidebar-tag span:nth-child(3) {
         translate: 0 0%;
         rotate: -45deg;
-        transition: translate .4s .4s linear,
-            rotate .4s .8s linear;
+        transition: translate .4s linear,
+            rotate .4s .4s linear;
     }
 
     nav {
@@ -162,15 +163,15 @@ body {
         z-index: 2;
         top: 70%;
         right: 0%;
-        translate: -1000% 0%;
+        translate: -2000px 0%;
         opacity: 0;
-        transition: translate 0s 1s, opacity .8s .2s;
+        transition: translate 1.5s .3s cubic-bezier(.6, 0, 1, -0.6), opacity .6s .3s;
     }
 
     #sidebar:checked~nav {
-        translate: 0% 0%;
+        translate: 0px 0%;
         opacity: .95;
-        transition: translate 0s, opacity 1s .5s;
+        transition: translate 1.2s cubic-bezier(0, 1.8, 0, 1), opacity 1.5s .5s;
     }
 
     nav a {
@@ -218,17 +219,16 @@ body {
         top: 5px;
         left: 40px;
         transform: rotate(0deg);
-        animation: flower1 1.5s;
+        animation: flower1 5s;
     }
 
     .h1-pattern img:nth-child(2) {
         width: 65px;
-
         position: absolute;
         top: -5px;
         right: 5px;
         transform: rotate(0deg);
-        animation: flower2 2s;
+        animation: flower2 4.5s;
     }
 
     /* ---------- main ---------- */
@@ -523,7 +523,6 @@ body {
 }
 
 /* ---------- web ---------- */
-
 @media screen and (min-width:1260px) {
 
     /* ---------- header ---------- */

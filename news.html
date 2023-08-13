@@ -12,6 +12,29 @@
 
     <script>
         $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
             let showHeight = 10
             $(window).scroll(function () {
                 $(`.card:nth-child(n+2):nth-child(-n+4)`).each(function () {
@@ -30,25 +53,6 @@
                 })
             })
         })
-    </script>
-
-    <script>
-        $(function () {
-            $(`body`).mousemove(function (e) {
-                $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
-            })
-                .mouseout(function () {
-                    $('.mouse').hide()
-                })
-        })	
-    </script>
-
-    <script>
-        $(function () {
-            $('.top').click(function () {
-                $('html,body').animate({ scrollTop: 0 }, 1500);
-            });
-        });
     </script>
 </head>
 
@@ -84,6 +88,7 @@
         </header>
 
         <img src="object/background_wavy3.png" alt="background_wavy3" class="header-wavy">
+
         <h1>最新消息</h1>
         <div class="h1-pattern">
             <img src="object/flower_left.svg" alt="flower_left">

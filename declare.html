@@ -8,9 +8,49 @@
     <link rel="stylesheet" href="meyerweb css reset.css">
     <link rel="stylesheet" href="declare.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('.guide-a').click(function () {
+                var hs_hight = $($(this).attr("href")).offset().top;
+                $("html, body").animate({
+                    scrollTop: hs_hight + "px"
+                }, 1200);
+                return false;
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
+
     <!-- ---------- header ---------- -->
 
     <div class="wrap-header">
@@ -19,6 +59,12 @@
                 <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
 
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="sidebar-tag">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <a href="news.html">最新消息</a>
                 <a href="product.html">商品資訊</a>
@@ -48,9 +94,9 @@
             <div class="subnav">
                 <p>認真落實每個品質把關的步驟<br>維護我們的堅持與用心</p>
                 <div class="guide">
-                    <a href="#guide-method">品質管理</a>
-                    <a href="#guide-safe">原料嚴選</a>
-                    <a href="#guide-qna">商品情報</a>
+                    <a href="#guide-method" class="guide-a">品質管理</a>
+                    <a href="#guide-safe" class="guide-a">原料嚴選</a>
+                    <a href="#guide-qna" class="guide-a">商品情報</a>
                 </div>
             </div>
             <div class="quality" id="guide-method">
@@ -102,9 +148,10 @@
 
                 <img src="object/pattern_flower_right.svg" alt="pattern_flower_right" class="report-pattern">
 
-                <div class="report">
-                    <div>成品 / 原物料 檢驗報告</div>
-                </div>
+                <a href="#" class="report">
+                    <p>成品 / 原物料 檢驗報告</p>
+                </a>
+
             </div>
 
             <div class="quality" id="guide-safe">
@@ -115,14 +162,16 @@
                 <h3>安全來源</h3>
                 <div class="safe">
                     <div class="safe-title">
+                        <img src="object/button.svg" alt="button">
+                        <img src="object/button_active.svg" alt="button_active" class="active">
                         <div class="title">食材</div>
                         <div class="title">認證 / 來源</div>
+                        <img src="object/button.svg" alt="button">
+                        <img src="object/button_active.svg" alt="button_active" class="active">
                     </div>
                     <div class="safe-content">
-                        <img src="object/button.svg" alt="button">
                         <div class="content">有機驗證</div>
                         <div class="content">栗子</div>
-                        <img src="object/button.svg" alt="button">
                     </div>
                     <div class="safe-content">
                         <div class="content">非基因改造紅豆</div>
@@ -139,13 +188,18 @@
 
             <div class="quality" id="guide-qna">
                 <img src="object/pattern_rabbit.png" alt="pattern_rabbit" class="qna-pattern">
-                <h2>餐點情報</h2>
+                <h2>商品情報</h2>
                 <p>針對含有致過敏性原料的餐點資訊，期待透過Q&A讓您更了解我們的產品。</p>
 
                 <div class="qna">
-                    <div>問與答</div>
-                    <div>過敏原一覽表</div>
+                    <a href="#" class="qna-a report">
+                        <p>問與答</p>
+                    </a>
+                    <a href="#" class="qna-a report">
+                        <p>過敏原一覽表</p>
+                    </a>
                 </div>
+
             </div>
 
         </div>

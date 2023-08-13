@@ -8,9 +8,36 @@
     <link rel="stylesheet" href="meyerweb css reset.css">
     <link rel="stylesheet" href="product-description.css">
     <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
 
     <!-- ---------- header ---------- -->
 
@@ -20,6 +47,12 @@
                 <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
             </div>
 
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="sidebar-tag">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <a href="news.html">最新消息</a>
                 <a href="product.html">商品資訊</a>
