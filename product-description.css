@@ -1,14 +1,12 @@
 @font-face {
     font-family: GenJyuuGothic;
-    src: url(font/GenJyuuGothic-Normal.ttf),
-        url(font/GenJyuuGothic-Medium.ttf),
-        url(font/GenJyuuGothic-Heavy.ttf),
-        url(font/GenJyuuGothic-Bold.ttf),
-        url(font/GenJyuuGothic-Regular.ttf),
-        url(font/GenJyuuGothic-Light.ttf),
-        url(font/GenJyuuGothic-ExtraLight.ttf);
+    src: url(font/GenJyuuGothic-Normal.ttf)
 }
 
+@font-face {
+    font-family: GenJyuuGothicMedium;
+    src: url(font/GenJyuuGothic-Medium.ttf)
+}
 
 body {
     font-family: GenJyuuGothic;
@@ -322,7 +320,7 @@ body {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        margin: auto;
+        margin: 10px auto;
     }
 
     .sub-pic img {
@@ -386,29 +384,21 @@ body {
         margin: 15px auto;
     }
 
-    .count {
-        margin-left: 3%;
+    .count input {
+        border: none;
+        background-color: transparent;
+        width: 30%;
+        text-align: center;
     }
 
-    .count p {
+    #consult {
+        font-family: GenJyuuGothic;
         color: #444;
-        font-size: 14px;
-        padding: 0 20%;
+        font-size: 16px;
+        border: none;
+        text-align: center;
     }
 
-    .taste p {
-        color: #444;
-        font-size: 14px;
-        padding: 0 20% 0 25%;
-    }
-
-    .taste img {
-        width: 9px;
-    }
-
-    .count img {
-        width: 10px;
-    }
 
     .shop {
         width: 235px;
@@ -764,7 +754,14 @@ body {
     .sub-pic {
         display: flex;
         justify-content: space-around;
+        margin: 10px 0;
     }
+
+    .small {
+        width: 118px;
+        height: 80px;
+    }
+
 
     .information .txt {
         margin-left: 120px;
@@ -818,24 +815,19 @@ body {
         margin: 20px 0;
     }
 
-    .count p {
+    .count input {
+        border: none;
+        background-color: transparent;
+        width: 30%;
+        text-align: center;
+    }
+
+    #consult {
+        font-family: GenJyuuGothic;
         color: #444;
         font-size: 16px;
-        padding: 0 70px;
-    }
-
-    .taste p {
-        color: #444;
-        font-size: 16px;
-        padding: 0 70px 0 80px;
-    }
-
-    .taste img {
-        width: 9px;
-    }
-
-    .count img {
-        width: 10px;
+        border: none;
+        text-align: center;
     }
 
     .shop {

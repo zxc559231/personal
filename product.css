@@ -1,12 +1,11 @@
 @font-face {
     font-family: GenJyuuGothic;
-    src: url(font/GenJyuuGothic-Normal.ttf),
-        url(font/GenJyuuGothic-Medium.ttf),
-        url(font/GenJyuuGothic-Heavy.ttf),
-        url(font/GenJyuuGothic-Bold.ttf),
-        url(font/GenJyuuGothic-Regular.ttf),
-        url(font/GenJyuuGothic-Light.ttf),
-        url(font/GenJyuuGothic-ExtraLight.ttf);
+    src: url(font/GenJyuuGothic-Normal.ttf)
+}
+
+@font-face {
+    font-family: GenJyuuGothicMedium;
+    src: url(font/GenJyuuGothic-Medium.ttf)
 }
 
 body {
@@ -277,6 +276,7 @@ body {
     }
 
     h1 {
+        font-family: GenJyuuGothicMedium;
         color: #444444;
         font-size: 30px;
         font-weight: 500;
@@ -413,6 +413,7 @@ body {
     }
 
     .button p {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 16px;
         font-weight: 500;
@@ -437,7 +438,6 @@ body {
     .promotions {
         text-align: center;
         width: 100%;
-
     }
 
     .promotions img {
@@ -446,12 +446,18 @@ body {
 
     .promotions p {
         position: absolute;
-        top: 110px;
+        top: 80px;
         margin: auto;
         color: #fff;
         font-size: 26px;
         font-weight: 600;
         letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .warp-promotions .promotions p span {
+        display: inline-block;
+        padding: 10px 0;
     }
 
     /* ---------- classify ---------- */
@@ -482,12 +488,12 @@ body {
     }
 
     .menu .list a {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 18px;
         font-weight: 500;
         text-decoration: none;
-        /* margin: 30px 28px 0; */
-        /* padding: 20px 30px; */
+        padding: 10px 3px;
         z-index: 1;
         border-bottom: 3px solid #EAE8DB;
     }
@@ -497,18 +503,8 @@ body {
         border: 2px solid #F4D5C0;
     }
 
-    .menu-pattern img:nth-child(1) {
-        position: absolute;
-        width: 10px;
-        top: 100px;
-        left: 125px;
-    }
-
-    .menu-pattern img:nth-child(2) {
-        position: absolute;
-        width: 60px;
-        top: 50px;
-        left: 155px;
+    .menu-pattern {
+        display: none;
     }
 
     /* ---------- main ---------- */
@@ -557,6 +553,7 @@ body {
     }
 
     h2 {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 20px;
         font-weight: 500;
@@ -867,6 +864,7 @@ body {
     }
 
     h1 {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 34px;
         font-weight: 500;
@@ -893,11 +891,17 @@ body {
         width: 55px;
         left: 520px;
         bottom: 50px;
+        opacity: 1;
+        transform: rotate(0deg);
+        animation: flower1 1.5s;
     }
 
     .h1-pattern img:nth-child(2) {
         right: 475px;
         bottom: 45px;
+        opacity: 1;
+        transform: rotate(0deg);
+        animation: flower2 2s;
     }
 
     /* ---------- theme ---------- */
@@ -996,6 +1000,7 @@ body {
     }
 
     .button p {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 16px;
         font-weight: 500;
@@ -1064,6 +1069,7 @@ body {
     }
 
     .menu .list a {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 18px;
         font-weight: 500;
@@ -1130,6 +1136,7 @@ body {
     }
 
     h2 {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 20px;
         font-weight: 500;

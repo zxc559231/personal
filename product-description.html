@@ -32,6 +32,43 @@
             });
         });
     </script>
+
+    <script>
+        function showLarge(e) {
+            document.getElementById("large").src = e.target.src;
+        }
+
+        function init() {
+            let smalls = document.getElementsByClassName("small");
+            for (let i = 0; i < smalls.length; i++) {
+                smalls[i].onclick = showLarge;
+            }
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
+
+    <script>
+        function $id(id) {
+            return document.getElementById(id)
+        }
+
+        function init() {
+            $id("btnMinus0").onclick = function (e) {
+                let qty = e.target.nextElementSibling;
+                if (qty.value == 0) {
+                    return;
+                }
+                qty.value = qty.value - 1;
+            }
+
+            $id("btnPlus0").onclick = function (e) {
+                let qty = e.target.previousElementSibling;
+                qty.value = parseInt(qty.value) + 1;
+            }
+        }
+        window.addEventListener("load", init, false);	
+    </script>
 </head>
 
 <body>
@@ -115,14 +152,14 @@
             <div class="information">
                 <div class="pic">
                     <div class="main-pic">
-                        <img src="object/description_original.png" alt="description_original">
+                        <img id="large" src="object/description_original.png" alt="description_original">
                     </div>
 
                     <div class="sub-pic">
-                        <img src="object/description_original_sub.png" alt="description_original_sub">
-                        <img src="object/description_strawberry.png" alt="description_strawberry">
-                        <img src="object/description_matcha.png" alt="description_matcha">
-                        <img src="object/description_flower.png" alt="description_flower">
+                        <img src="object/description_original.png" alt="description_original_sub" class="small">
+                        <img src="object/description_strawberry.png" alt="description_strawberry" class="small">
+                        <img src="object/description_matcha.png" alt="description_matcha" class="small">
+                        <img src="object/description_flower.png" alt="description_flower" class="small">
                     </div>
                 </div>
 
@@ -132,15 +169,17 @@
                     <p class="spec">規格 4入/盒</p>
                     <p class="price">NT$ 120</p>
                     <div>
-                        <div class="taste">
-                            <p>口味</p>
-                            <img src="object/pattern_drop.svg" alt="pattern_drop">
-                        </div>
-
+                        <select name="口味" id="consult" class="taste">
+                            <option value="consult">口味</option>
+                            <option value="consult">原味</option>
+                            <option value="consult">草莓口味</option>
+                            <option value="consult">抹茶口味</option>
+                            <option value="consult">梅花口味</option>
+                        </select>
                         <div class="count">
-                            <img src="object/pattern_minus.svg" alt="pattern_minus">
-                            <p>數量</p>
-                            <img src="object/pattern_plus.svg" alt="pattern_plus">
+                            <input type="button" value="-" id="btnMinus0">
+                            <input type="text" size="4" value="0" id="qty0" readonly>
+                            <input type="button" value="+" id="btnPlus0">
                         </div>
                     </div>
                     <button class="shop">

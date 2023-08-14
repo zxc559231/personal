@@ -1,17 +1,15 @@
 @font-face {
     font-family: GenJyuuGothic;
-    src: url(font/GenJyuuGothic-Normal.ttf),
-        url(font/GenJyuuGothic-Medium.ttf),
-        url(font/GenJyuuGothic-Heavy.ttf),
-        url(font/GenJyuuGothic-Bold.ttf),
-        url(font/GenJyuuGothic-Regular.ttf),
-        url(font/GenJyuuGothic-Light.ttf),
-        url(font/GenJyuuGothic-ExtraLight.ttf);
+    src: url(font/GenJyuuGothic-Normal.ttf)
 }
 
+@font-face {
+    font-family: GenJyuuGothicMedium;
+    src: url(font/GenJyuuGothic-Medium.ttf)
+}
 
 body {
-    font-family: Gen Jyuu Gothic;
+    font-family: GenJyuuGothic;
     width: 100%;
     overflow-x: hidden;
 }
@@ -194,6 +192,7 @@ body {
     }
 
     h1 {
+        font-family: GenJyuuGothicMedium;
         color: #444444;
         font-size: 30px;
         font-weight: 500;
@@ -357,7 +356,7 @@ body {
         color: #D28164;
         font-size: 14px;
         text-decoration: none;
-        margin: 0 60px;
+        margin: 0 10px;
     }
 
     .other {
@@ -564,6 +563,7 @@ body {
     }
 
     h1 {
+        font-family: GenJyuuGothicMedium;
         color: #444;
         font-size: 34px;
         font-weight: 500;
