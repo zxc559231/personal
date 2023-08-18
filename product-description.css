@@ -291,6 +291,13 @@ body {
         text-decoration: none;
     }
 
+    .subnav p {
+        display: inline-block;
+        color: #444;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
     .subnav a:nth-child(1):after,
     .subnav a:nth-child(2):after {
         content: "　/　";
@@ -719,6 +726,13 @@ body {
         font-size: 14px;
         letter-spacing: 0.5px;
         text-decoration: none;
+    }
+
+    .subnav p {
+        display: inline-block;
+        color: #444;
+        font-size: 14px;
+        letter-spacing: 0.5px;
     }
 
     .subnav a:nth-child(1):after,
