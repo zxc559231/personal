@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雀梅菓舖</title>
+    <link rel="stylesheet" href="meyerweb css reset.css">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://kit.fontawesome.com/1efcba22ec.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(function () {
+            if ($(window).width() > 1260) {
+                $(`body`).mousemove(function (e) {
+                    $('.mouse').show().css({ 'left': e.pageX + 5, 'top': e.pageY + 5 });
+                })
+                    .mouseout(function () {
+                        $('.mouse').hide()
+                    })
+            } else {
+                $('.mouse').mousemove().hide()
+            }
+        })
+    </script>
+
+    <script>
+        $(function () {
+            $('.top').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1500);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <img src="object/mouse2.svg" alt="mouse" class="mouse">
+    <img src="object/top.svg" alt="top" class="top">
+
+    <!-- ---------- header ---------- -->
+    <div class="wrap-header">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
+            </div>
+
+            <input type="checkbox" id="sidebar">
+            <label for="sidebar" class="sidebar-tag">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <a href="news.html">最新消息</a>
+                <a href="product.html">商品資訊</a>
+                <a href="declare.html">安心宣言</a>
+                <a href="member.html">會員專區</a>
+                <a href="service.html">聯繫我們</a>
+            </nav>
+
+            <div class="header-pattern">
+                <img src="object/pattern_flower.svg" alt="pattern_flower">
+            </div>
+        </header>
+
+        <img src="object/background_wavy3.png" alt="background_wavy3" class="header-wavy">
+
+        <h1>購物車</h1>
+        <div class="h1-pattern">
+            <img src="object/flower_left.svg" alt="flower_left">
+            <img src="object/pattern_flower_right2.svg" alt="pattern_flower_right2">
+        </div>
+    </div>
+
+    <!-- ---------- main ---------- -->
+
+
+
+
+    <!-- ---------- footer ---------- -->
+
+    <div class="warp-footer">
+        <footer>
+            <div class="logo">
+                <a href="index.html"><img src="object/logo.svg" alt="logo"></a>
+            </div>
+
+            <div class="item">
+                <div class="list">
+                    <ul class="list-product">
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="product.html">商品資訊</a></li>
+                        <li><a href="declare.html">安心宣言</a></li>
+                    </ul>
+                    <ul class="list-client">
+                        <li><a href="member.html">會員專區</a></li>
+                        <li><a href="service.html">聯繫我們</a></li>
+                    </ul>
+                </div>
+
+
+                <ul class="company">
+                    <li>梅子和菓有限公司</li>
+                    <li>台灣省桃園市中壢區復興路46號</li>
+                    <li class="email"><i class="fa-solid fa-envelope"></i><span>QueMei@gmail.com</span></li>
+                </ul>
+
+                <ul class="focus">
+                    <li>關注我們</li>
+                    <a href=""><i class="fa-brands fa-blogger-b"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-line"></i></a>
+                </ul>
+            </div>
+
+        </footer>
+        <div class="copyright">
+            本網站為緯育 TibaMe【CHD103】前端工程師專業技術養成班學員作品，僅供學習、展示之用途。
+        </div>
+    </div>
+
+</body>
+
+</html>
